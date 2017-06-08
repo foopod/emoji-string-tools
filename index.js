@@ -8,12 +8,28 @@ const split = require('emoji-aware').split;
  * @param {string} string
  * @return {boolean}
  */
-module.exports.isOnlyEmoji = function(str) {
-    var arr = split(str);
-    for(var i = 0; i < arr.length; i++){
-        if(!isEmoji(arr[i])){
+module.exports.isOnlyEmoji = function(string) {
+    var array = split(string);
+    for(var i = 0; i < array.length; i++){
+        if(!isEmoji(array[i])){
             return false;
         }
     }
     return true;
+};
+
+/**
+ * Strips characters that are not emoji
+ * @param {string} string
+ * @return {string}
+ */
+module.exports.stripNonEmoji = function(string) {
+    var array = split(string);
+    var output = "";
+    for(var i = 0; i < array.length; i++){
+        if(isEmoji(array[i])){
+            output += array[i];
+        }
+    }
+    return output;
 };

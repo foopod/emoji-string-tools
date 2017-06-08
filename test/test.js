@@ -14,3 +14,20 @@ describe('emojiLib.isOnlyEmoji', function() {
         expect(result).to.equal(true);
     });
 });
+
+describe('emojiLib.stripNonEmoji', function() {
+    it('should remove a single non-emoji character', function() {
+        var result = emojiLib.stripNonEmoji("😉f😣😅");
+        expect(result).to.equal("😉😣😅");
+    });
+
+    it('should remove multiple non-emoji characters', function() {
+        var result = emojiLib.stripNonEmoji("😉f😣as😅 oh wow");
+        expect(result).to.equal("😉😣😅");
+    });
+
+    it('should not remove emoji characters', function() {
+        var result = emojiLib.stripNonEmoji("👩‍👩‍👧‍👦👝👒👩‍👧‍👦😾👊🏼");
+        expect(result).to.equal("👩‍👩‍👧‍👦👝👒👩‍👧‍👦😾👊🏼");
+    });
+});
