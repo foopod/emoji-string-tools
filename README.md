@@ -14,10 +14,10 @@ A JS Module to help manipulate strings that contain emoji
 ## Usage
 
 ``` javascript
-    const emojiStringTools = require('emoji-string-tools');
+const emojiStringTools = require('emoji-string-tools');
 
-    emojiStringTools.isEmojiOnly("✊👊✊👊✊👊✊👊"); //true
-    emojiStringTools.isEmojiOnly("Go suck a 🍆!"); //false
+emojiStringTools.isEmojiOnly("✊👊✊👊✊👊✊👊"); //true
+emojiStringTools.isEmojiOnly("Go suck a 🍆!"); //false
 ```
 
 
