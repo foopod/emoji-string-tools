@@ -1,6 +1,10 @@
 Emoji String Tools
 =========
 
+[![Build Status](https://travis-ci.org/foopod/emoji-string-tools.svg?branch=master)](https://travis-ci.org/foopod/emoji-string-tools)
+
+[![Coverage Status](https://coveralls.io/repos/github/foopod/emoji-string-tools/badge.svg?branch=master)](https://coveralls.io/github/foopod/emoji-string-tools?branch=master)
+
 A JS Module to help manipulate strings that contain emoji
 
 ## Installation
